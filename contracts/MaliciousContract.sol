@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.21;
 
-import "./MobitToken2.sol";
+import "./MobitToken.sol";
 
 contract MaliciousContract {
-    MobitToken2 public token;
+    MobitToken public token;
     address public capManager;
 
     constructor(address _tokenAddress, address _capManager) {
-        token = MobitToken2(_tokenAddress);
+        token = MobitToken(_tokenAddress);
         capManager = _capManager;
     }
 

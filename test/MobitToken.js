@@ -14,7 +14,7 @@ describe("MobitToken2.o", function () {
   beforeEach(async function () {
     [owner, capManager, attacker, addr1, addr2, ...addrs] = await ethers.getSigners();
 
-    const MobitTokenFactory = await ethers.getContractFactory("MobitToken2");
+    const MobitTokenFactory = await ethers.getContractFactory("MobitToken");
     mobitToken = await MobitTokenFactory.deploy();
 
     // await mobitToken.deployed();
