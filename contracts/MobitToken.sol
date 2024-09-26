@@ -108,3 +108,6 @@ contract MobitToken is
 
 // contract address on our private network: 0xb5f59250a87505fcb3CE1500b092A42C81985004
 // Proxy contract address on our private network: 0x3EfeF7ED92591556AA35812C6340E3dEB83ab692
+
+// contract address on polygon : 0xC28b52f982B1d087F8e903cA13Db6bE937F3beC1
+// Proxy contract address on POlygon : 0x01A8340821D8206f8DA5a5b00f904397CBE1EaF6

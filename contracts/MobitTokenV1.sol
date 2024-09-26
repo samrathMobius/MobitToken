@@ -27,7 +27,6 @@ contract MobitTokenV1 is
 
     event Burn(address indexed from, uint256 amount);
 
-
     /// @notice Initializes the contract with necessary parameters
     /// @param capManager The address to be granted CAP_MANAGER_ROLE
     /// @param _maxSupply The maximum token supply
@@ -99,11 +98,10 @@ contract MobitTokenV1 is
         super._update(from, to, value);
     }
 
-
     /// @notice Returns the contract version
     /// @return The version string
     function version() external pure returns (string memory) {
-        return "1.3.0";
+        return "1.4.0";
     }
 
 }

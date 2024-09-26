@@ -1,6 +1,6 @@
 const { ethers, upgrades } = require("hardhat");
 
-const PROXY = "0x3EfeF7ED92591556AA35812C6340E3dEB83ab692"
+const PROXY = "0x01A8340821D8206f8DA5a5b00f904397CBE1EaF6" // polygon amoy
 
 async function main() {
  const MobitTokenV1 = await ethers.getContractFactory("MobitTokenV1");

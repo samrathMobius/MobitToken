@@ -174,6 +174,26 @@ describe("MobitToken2.o", function () {
     ).to.be.revertedWithCustomError(mobitToken, "AccessControlUnauthorizedAccount")
         .withArgs(maliciousContract, "0x027f9f680a0c6704fd9796b55c67fe885252243966ecb05a88f3e7873c845d9a");
   });
+
+  it("should airdrop tokens to many addresses without running out of gas", async function () {
+    // Create an array of many addresses for the airdrop
+    const numberOfRecipients = 500; // 500 recipients used 
+    let recipients = [];
+
+    for (let i = 0; i < numberOfRecipients; i++) {
+      // Used ethers.js to generate dummy addresses for testing
+      recipients.push(ethers.Wallet.createRandom().address);
+    }
+
+    const airdropAmount = ethers.parseUnits("100", 18);
+
+    const tx = await mobitToken.connect(capManager).airdrop(recipients, airdropAmount);
+
+    const receipt = await tx.wait();
+
+    console.log("Gas Used:", receipt.gasUsed.toString());
+
+  });
   
 });
 
